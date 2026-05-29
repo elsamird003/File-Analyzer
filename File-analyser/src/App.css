@@ -1,3 +1,119 @@
+.hero-image {
+  max-width: 280px;
+  height: auto;
+}
+
+#center button {
+  font: inherit;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  color: var(--text-h);
+  background: var(--accent-bg);
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+
+  &:hover:not(:disabled) {
+    border-color: var(--accent-border);
+    box-shadow: var(--shadow);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.message {
+  max-width: 560px;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+.message.error {
+  color: #b91c1c;
+  background: rgba(185, 28, 28, 0.1);
+  border: 1px solid rgba(185, 28, 28, 0.25);
+}
+
+.results {
+  width: 100%;
+  max-width: 640px;
+  text-align: left;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.results h2 {
+  margin: 0 0 16px;
+  word-break: break-word;
+}
+
+.results h3 {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--text-h);
+  margin: 0 0 12px;
+}
+
+.results-grid,
+.metadata-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.results-grid {
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.results-grid dt,
+.metadata-list dt {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.results-grid dd,
+.metadata-list dd {
+  margin: 0;
+  color: var(--text-h);
+}
+
+.mono {
+  font-family: var(--mono);
+  font-size: 14px;
+}
+
+.results-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.text-preview {
+  margin: 0;
+  padding: 16px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  color: var(--text-h);
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
